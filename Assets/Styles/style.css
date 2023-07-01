@@ -1,0 +1,613 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1A1818;
+    transition: background 0.2s linear;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+@font-face{
+    font-family: "Jaguar";
+    src: url(../Fonts/BlackJaguarDemoRegular.ttf) format("truetype");
+}
+  
+@font-face{
+    font-family: "Death";
+    src: url(../Fonts/Death\ Record.otf) format("opentype");
+}
+
+@keyframes navLinkFade{
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.header{
+    background-color: #000;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 14vh;
+}
+
+#logo{
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+}
+
+.header h1{
+    font-family: "Jaguar";
+    font-size: 38px;
+}
+
+.mobile-menu{
+    display: block;
+    cursor: pointer;
+}
+  
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+
+    background: #fff;
+    transition: 0.3s;
+}
+
+.nav-list{
+    position: absolute;
+    top: 14vh;
+    right: 0;
+    width: 40vw;
+    height: 92vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 25px;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+
+    background-color: #000000;
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+.nav-list li{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-list a{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100px;
+}
+
+.nav-list a:hover{
+    opacity: 0.7;
+}
+
+.nav-list hr{
+    display: flex;
+    width: 80%;
+    height: 0.9px;
+    border: none;
+    background-color: #787878;
+    opacity: 0.3;
+}
+
+/*button dark mode*/
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+  
+.label{
+    background-color: #111;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+  
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+  
+.moon{
+    width: 23px;
+    height: 23px;
+    position: relative;
+    right: 2px;
+}
+  
+.sun{
+    width: 23px;
+    height: 23px;
+    position: relative;
+    right: 2px;
+}
+
+/*light mode*/
+
+body.light{
+    background-color: #F9F8F6;
+}
+  
+.light .principal__content-text h1{
+    color: #000000;
+}
+  
+.light .principal__content-text h2{
+    color: #000000;
+}
+
+.light .principal__content-text p{
+    color: #787878;
+}
+  
+.light #front p{
+    color: #ffffff;
+}
+
+/*main*/
+
+.principal{
+    width: 100%;
+    height: 100%;
+}
+
+.principal__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image{
+    width: 25%;
+}
+
+.principal__content img{
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    transition: all 0.38s ease-in-out;
+}
+
+.principal__content img:hover{
+    box-shadow: 16px 16px 32px rgb(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.principal__content-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #808080;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 20px;
+    margin: 20px;
+    width: 50%;
+}
+
+.principal__content-text h1{
+    font-size: 40px;
+    color: #fff;
+}
+
+.principal__content-text h2{
+    font-size: 25px;
+    padding-top: 20px;
+    color: #fff;
+}
+
+/*button*/
+
+#buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-personagens,#button-leia_mais{
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 10px;
+
+    background-color: #000;
+    color: ghostwhite;
+    border: 2px solid #000;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+
+    transition: transform 0.28s ease-in-out;
+    cursor: pointer;
+}
+
+#button-personagens:hover{
+    transform: scale(0.95);
+    rotate: 1deg;
+
+    text-shadow: 0 0 8px #902b8e;
+    box-shadow: 0 0 24px #902b8e;
+    color: #902b8e;
+    border: 2px solid #902b8e;
+}
+
+#button-leia_mais:hover{
+    transform: scale(0.95);
+    rotate: 1deg;
+
+    text-shadow: 0 0 8px #902b8e;
+    box-shadow: 0 0 24px #902b8e;
+    color: #902b8e;
+    border: 2px solid #902b8e;
+}
+
+#button-personagens span{
+    transition: color 0.6s;
+}
+
+#button-leia_mais span{
+    transition: color 0.6s;
+}
+
+/*card*/
+
+.section__spoiler{
+    height: 780px;
+    width: 100%;
+}
+
+.section__spoiler h1{
+    font-family: "Death";
+    font-size: 100px;
+    color: #000000;
+}
+    
+.section__spoiler p{
+    font-size: 27px;
+    color: #fff;
+    padding: 60px;
+}
+    
+#card{
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+    }
+    
+.face{
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+}
+
+.face:hover{
+    transform: scale(1.03);
+}
+
+#front{
+    background-image: url(../Images/Sangue\ sem\ fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #680414;
+    transform: rotateY(180deg); 
+}
+    
+#back{
+    background-image: url(../Images/Sangue\ sem\ fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #680414;
+    backface-visibility:hidden;
+}
+    
+.flip{
+    transform: rotateY(180deg);
+}
+
+/*footer*/
+
+.footer{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer__contatos h1{
+    color: #ffffff;
+    font-size: 40px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bolder;
+}
+
+.footer__contatos ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__contatos i{
+    font-size: 50px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#color-instagram{
+    background-image: linear-gradient(150deg,#304FDD, #793DD0, #AD38AB, #D9387E,#F03A53, #F05030, #F18B27, #EDA52F,#EFCD6B);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform 0.32s ease-in-out;
+}
+
+#color-linkedin{
+    transition: transform 0.32s ease-in-out;
+
+    color: #0e76a8;
+}
+
+#color-instagram:hover{
+    transform: scale(1.2);
+}
+
+#color-linkedin:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:1250px){
+
+    .header{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .nav-list a{
+        height: 85px;
+    }
+
+    .nav-list li{
+        height: 85px;
+    }
+
+    .principal__content{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+    }
+
+    #image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width:965px) {
+
+    .principal__content h2{
+        font-size: 18px;
+    }
+
+    .nav-list{
+        font-size: 22px;
+    }
+
+    .section__spoiler{
+        height: 550px;
+    }
+
+    .face{
+        width: 500px;
+        height: 500px;
+    }
+
+    .face p{
+        font-size: 19px;
+    }
+    
+}
+
+@media screen and (max-width:530px){
+
+    .header h1{
+        font-size: 32px;
+    }
+
+    .nav-list li{
+        font-size: 17px;
+    }
+
+    .principal__content h1{
+        font-size: 32px;
+    }
+
+    .principal__content h2{
+        font-size: 20px;
+    }
+
+    .principal__content-text p{
+        font-size: 25px;
+    }
+
+    #buttons{
+        width: 360px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .section__spoiler{
+        height: 450px;
+    }
+
+    .face{
+        width: 360px;
+        height: 360px;
+    }
+
+    .face h1{
+        font-size: 90px;
+    }
+
+    .face p{
+        font-size: 13px;
+    }
+
+    .footer h1{
+        font-size: 37px;
+    }
+}
+
+@media screen and (max-width: 360px){
+
+    .header h1{
+        font-size: 23.3px;
+    }
+
+    .nav-list li{
+        font-size: 12.5px;
+    }
+
+    .principal__content img{
+        width: 150px;
+        height: 300px;
+    }
+
+    .principal__content h1{
+        font-size: 20px;
+    }
+
+    .principal__content h2{
+        font-size: 16px;
+    }
+
+    .principal__content-text p{
+        font-size: 14px;
+    }
+
+    .face{
+        width: 250px;
+        height: 250px;
+    }
+    .face h1{
+        font-size: 50px;
+    }
+
+    .face p{
+        font-size: 8.53px;
+    }
+
+    .section__spoiler{
+        height: 300px;
+    }
+
+    #buttons{
+        width: 270px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #button-personagens span{
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #button-leia_mais span{
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer h1{
+        font-size: 23px;
+    }
+}
