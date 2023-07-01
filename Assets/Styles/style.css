@@ -47,6 +47,8 @@ ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    z-index: 10;
 
     width: 100%;
     height: 14vh;
@@ -220,6 +222,7 @@ body.light{
 .principal{
     width: 100%;
     height: 100%;
+    padding: 150px 0 0 0;
 }
 
 .principal__content{
@@ -228,6 +231,7 @@ body.light{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 #image{
