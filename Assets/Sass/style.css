@@ -1,0 +1,39 @@
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #640303;
+}
+
+p::-webkit-scrollbar {
+  width: 5px;
+}
+
+p::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+p::-webkit-scrollbar-thumb {
+  background-color: rgb(72, 69, 69);
+  border-radius: 25px;
+}
+
+@font-face {
+  font-family: Juana medium;
+  src: url(../Fonts/Juana\ Medium.otf);
+}
+@font-face {
+  font-family: Juana light;
+  src: url(../Fonts/Juana\ light.otf);
+}
+body {
+  background-color: #1E1E1E;
+}
+body.light {
+  background-color: #E6E6FA;
+}/*# sourceMappingURL=style.css.map */

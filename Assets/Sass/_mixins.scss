@@ -1,0 +1,123 @@
+@import '_variáveis';
+
+@mixin responsive($responsive){
+    @if $responsive == mobile{
+        @media (min-width: 600px){
+            @content;
+        }
+    }@else if $responsive == tablet{
+        @media (min-width: 750px){
+            @content;
+        }
+    }@else if $responsive == screen{
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
+}
+
+@mixin title($title-type){
+    @if $title-type == dark{
+        font: {
+            family: Juana medium;
+            weight: 400;
+        }
+
+        color: $title;
+    } @else if $title-type == light{
+        font: {
+            family: Juana medium;
+            weight: 400;
+        }
+        color: $title-light;
+    } @else if $title-type == thin-dark{
+        font: {
+            family: Juana light;
+            weight: 700;
+        }
+        color: $title;
+    } @else if $title-type == thin-light{
+        font: {
+            family: Juana light;
+            weight: 700;
+        }
+        color: $title-light;
+    }
+}
+
+@mixin text($text-type){
+    @if $text-type == dark{
+        font: {
+            size: clamp(14px, 14px + 1vw, 28px);
+            family: 'Poppins', sans-serif;
+            weight: 400;
+        }
+        color: $text;
+    } @else if $text-type == light{
+        font: {
+            size: clamp(14px, 14px + 1vw, 28px);
+            family: 'Poppins', sans-serif;
+            weight: 400;
+        }
+        color: $text-light;
+    }
+}
+
+// cards
+
+@mixin card($card){
+    @if $card == brendon{
+        background-image: linear-gradient(135deg, 
+                                $color1-brendon,
+                                $color2-brendon);
+    } @else if $card == tessia{
+        background-image: linear-gradient(135deg,
+                                $color1-tessia,
+                                $color2-tessia);
+    } @else if $card == amerie{
+        background-image: linear-gradient(135deg,
+                                $color1-amerie,
+                                $color2-amerie);
+    } @else if $card == agnes{
+        background-image: linear-gradient(135deg,
+                                $color1-agnes,
+                                $color2-agnes);
+    } @else if $card == ambrose{
+        background-image: linear-gradient(135deg,
+                                $color1-ambrose,
+                                $color2-ambrose);
+    } @else if $card == amber{
+        background-image: linear-gradient(135deg,
+                                $color1-amber,
+                                $color2-amber);
+    } @else if $card == esmeray{
+    background-image: linear-gradient(135deg,
+                                $color1-esmeray,
+                                $color2-esmeray);
+    }
+}
+
+@mixin info-card($info-card){
+    @if $info-card == info-brendon{
+        border: 4px solid $color2-brendon;
+        background-color: $color1-brendon;
+    } @else if $info-card == info-tessia{
+        border: 4px solid $color2-tessia;
+        background-color: $color1-tessia;
+    } @else if $info-card == info-amerie{
+        border: 4px solid $color2-amerie;
+        background-color: $color1-amerie;
+    } @else if $info-card == info-agnes{
+        border: 4px solid $color2-agnes;
+        background-color: $color1-agnes;
+    } @else if $info-card == info-ambrose{
+        border: 4px solid $color2-ambrose;
+        background-color: $color1-ambrose;
+    } @else if $info-card == info-amber{
+        border: 4px solid $color2-amber;
+        background-color: $color1-amber;
+    } @else if $info-card == info-esmeray{
+        border: 4px solid $color2-esmeray;
+        background-color: $color1-esmeray;
+    }
+}
