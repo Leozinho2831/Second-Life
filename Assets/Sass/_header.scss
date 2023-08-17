@@ -1,3 +1,11 @@
 @import '_variáveis';
 @import '_mixins';
 
+.header{
+    background-color: $bg;
+    height: 14vh;
+    
+    .light{
+        background-color: $bg-light;
+    }
+}

@@ -48,14 +48,14 @@
 @mixin text($text-type){
     @if $text-type == dark{
         font: {
-            size: clamp(14px, 14px + 1vw, 28px);
+            size: clamp(10px, 14px + 0.5vw, 18px);
             family: 'Poppins', sans-serif;
             weight: 400;
         }
         color: $text;
     } @else if $text-type == light{
         font: {
-            size: clamp(14px, 14px + 1vw, 28px);
+            size: clamp(10px, 14px + 1vw, 18px);
             family: 'Poppins', sans-serif;
             weight: 400;
         }
