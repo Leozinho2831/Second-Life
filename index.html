@@ -12,13 +12,50 @@
 </head>
 <body>
     <header class="header">
-
+        <figure>
+            <a href="index.html">
+                <img src="Assets/Images/Logo.png" alt="Logo">
+            </a>
+        </figure>
+        <nav class="header__nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Character</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__menu" onclick="mobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="header__button">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" id="active">
+                <div></div>
+            </label>
+        </div>
     </header>
+    <nav class="mobile-menu">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Character</a>
+            </li>
+        </ul>
+    </nav>
     <main class="principal">
 
     </main>
     <footer class="footer">
         
     </footer>
+    <script src="Assets/Javascript/Dark-mode.js"></script>
+    <script src="Assets/Javascript/Menu.js"></script>
 </body>
 </html>

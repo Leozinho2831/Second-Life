@@ -2,10 +2,146 @@
 @import '_mixins';
 
 .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $space;
+
     background-color: $bg;
-    height: 14vh;
+    border-bottom: 2px solid $border;
     
-    .light{
+    .light &{
         background-color: $bg-light;
+        border-bottom: 2px solid $border-light;
+    }
+
+    figure{
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .header__nav{
+        display: none;
+
+        @include responsive(tablet){
+            display: block;
+        }
+        ul{
+            @include responsive(tablet){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: $gap;
+
+                a{
+                    @include title(dark);
+                    font-size: 40px;  
+                }
+            }
+        }
+
+    }
+    .header__menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+
+        cursor: pointer;
+
+        @include responsive(tablet){
+            display: none;
+        }
+
+        div{
+            width: 40px;
+            height: 2.5px;
+
+            background-color: $items-color;
+
+            &:nth-of-type(2){
+                width: 55px;
+            }
+
+            .light &{
+                background-color: $items-color-light;
+            }
+        }
+    }
+
+    .header__button{
+        display: flex;
+
+        #checkbox{
+            display: none;
+            
+            &:checked + label div{
+                background-image: url(../Images/Components/Moon.svg);
+            }
+        }
+
+        label{
+            width: 60px;
+            height: 60px;
+
+            background-color: $items-color;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px $shadow;
+            
+            .light &{
+                background-color: $items-color-light;
+            }
+
+            div{
+                background: {
+                    image: url(../Images/Components/Sun.svg);
+                    size: 35px 35px;
+                    repeat: no-repeat;
+                    position: center center;
+                }
+
+                height: 100%;
+            }
+        }
+    }
+}
+
+.mobile-menu{
+    display: none;
+    padding: $space;
+
+    background-color: $bg;
+    border-bottom: 2px solid $border;
+
+    .light &{
+        background-color: $bg-light;
+        border-bottom: 2px solid $border-light;
+    }
+
+    ul{
+        display: flex;
+        gap: $gap;
+
+        a{
+            @include title(dark);
+            font-size: 25px;
+
+            .light &{
+                @include title(light);
+            }
+        }
+    }
+}
+
+.view__menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(tablet){
+        display: none;
     }
 }

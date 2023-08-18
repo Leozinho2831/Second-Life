@@ -42,6 +42,15 @@ p::-webkit-scrollbar-thumb {
     src: url(../Fonts/Juana\ light.otf);
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
 body{
     background-color: $bg;
 
