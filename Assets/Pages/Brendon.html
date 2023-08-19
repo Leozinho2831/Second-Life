@@ -3,12 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Sass/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Brendon Taylor</title>
 </head>
 <body>
-    
+    <header class="header">
+        <figure>
+            <a href="../../index.html">
+                <img src="../Images/Logo.png" alt="Logo">
+            </a>
+        </figure>
+        <nav class="header__nav">
+            <ul>
+                <li>
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__menu" onclick="mobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="header__button">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" id="active">
+                <div></div>
+            </label>
+        </div>
+    </header>
+    <nav class="mobile-menu">
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="brendon">
+        
+    </main>
+    <footer class="footer">
+        <address id="contact">
+        <h1>Contato com Autor:</h1>
+            <div>
+                <a href="//www.linkedin.com/in/leonardo-ferraz-688095271/" target="_blank">
+                    <img src="../Images/Components/Contact/LinkedIn.svg" alt="Linkedin">
+                    <img src="../Images/Components/Contact/LinkedIn-light.svg" alt="Linkedin">
+                </a>
+                <a href="https://instagram.com/leonardo_reis_ferraz?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank">
+                    <img src="../Images/Components/Contact/Instagram.svg" alt="Instagram">
+                    <img src="../Images/Components/Contact/Instagram-light.svg" alt="Instagram">
+                </a>
+                <a href="mailto:leoferraz1818@gmail.com" target="_blank">
+                    <img src="../Images/Components/Contact/Mail.svg" alt="leoferraz1818@gmail.com">
+                    <img src="../Images/Components/Contact/Mail-light.svg" alt="leoferraz1818@gmail.com">
+                </a>
+                <a href="https://github.com/Leozinho2831" target="_blank">
+                    <img src="../Images/Components/Contact/Github.svg" alt="Git-Hub">
+                    <img src="../Images/Components/Contact/Github-light.svg" alt="Git-Hub">
+                </a>
+            </div>
+        </address>
+    </footer>
+    <script src="../Javascript/Dark-mode.js"></script>
+    <script src="../Javascript/Menu.js"></script>
 </body>
 </html>

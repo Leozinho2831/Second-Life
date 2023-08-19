@@ -35,7 +35,7 @@
     font-family: Juana medium;
     font-weight: 400;
     color: #890808;
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 .header .header__menu {
@@ -93,21 +93,24 @@
   display: none;
   padding: 30px;
   background-color: #1E1E1E;
-  border-bottom: 2px solid #851C1C;
+  border-top: 2px solid #851C1C;
 }
 .light .mobile-menu {
   background-color: #E6E6FA;
-  border-bottom: 2px solid #B1B1E8;
+  border-top: 2px solid #B1B1E8;
 }
 .mobile-menu ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
 }
 .mobile-menu ul a {
   font-family: Juana medium;
   font-weight: 400;
   color: #890808;
-  font-size: 25px;
+  font-size: 30px;
 }
 .light .mobile-menu ul a {
   font-family: Juana medium;
@@ -117,8 +120,6 @@
 
 .view__menu {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 @media (min-width: 750px) {
   .view__menu {
@@ -127,16 +128,58 @@
 }
 
 .footer {
-  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
   background-color: #1E1E1E;
   border-top: 2px solid #851C1C;
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #890808;
 }
 .light .footer {
   background-color: #E6E6FA;
   border-top: 2px solid #B1B1E8;
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #7474b2;
+}
+.footer address {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footer address h1 {
+  margin: 30px;
+}
+.footer address div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.footer address div a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+.footer address div a img:hover {
+  transform: scale(1.2);
+}
+.footer address div a img:nth-of-type(1) {
+  display: block;
+}
+.footer address div a img:nth-of-type(2) {
+  display: none;
+}
+.light .footer address div a img:nth-of-type(1) {
+  display: none;
+}
+.light .footer address div a img:nth-of-type(2) {
+  display: block;
 }
 
 .principal {
@@ -150,6 +193,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 40px 0;
   gap: 50px;
   background-image: url(../Images/Backgrounds/Background.png);
   background-position: center center;
@@ -161,7 +205,7 @@
   .principal .principal__presentation {
     width: 100%;
     flex-direction: row;
-    padding: 30px;
+    padding: 80px;
   }
 }
 .principal .principal__presentation figure {
@@ -238,7 +282,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 30px 0 0 0;
 }
 .principal .quebra-pagina img {
   width: 120px;
@@ -252,12 +296,25 @@
 .light .principal .quebra-pagina hr {
   background-image: linear-gradient(to right, #E6E6FA, #B1B1E8, #E6E6FA);
 }
+.principal .quebra-pagina h1 {
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #890808;
+  margin: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+.light .principal .quebra-pagina h1 {
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #7474b2;
+}
 .principal .principal__cards {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 30px 30px 60px 30px;
+  padding: 30px;
   gap: 50px;
 }
 .principal .principal__cards div {
@@ -352,6 +409,55 @@
 .principal .principal__cards #esmeray:hover {
   background-image: linear-gradient(135deg, #E38FD8, #87639e);
 }
+.principal aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px 60px 30px;
+}
+.principal aside h1 {
+  font-size: clamp(10px, 14px + 0.5vw, 18px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #BFBFBF;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+}
+.light .principal aside h1 {
+  font-size: clamp(10px, 14px + 1vw, 18px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #616060;
+}
+.principal aside button {
+  width: 150px;
+  height: 40px;
+  margin: 30px 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font-size: clamp(10px, 14px + 0.5vw, 18px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #BFBFBF;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.light .principal aside button {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: clamp(10px, 14px + 1vw, 18px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #616060;
+}
+.principal aside button:hover {
+  color: #890808;
+  transform: scale(0.95);
+}
+.light .principal aside button:hover {
+  color: #7474b2;
+}
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -393,6 +499,10 @@ p::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

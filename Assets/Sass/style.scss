@@ -5,7 +5,6 @@
 @import '_footer';
 
 @import '_main';
-@import '_main-personages';
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -49,6 +48,10 @@ p::-webkit-scrollbar-thumb {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{

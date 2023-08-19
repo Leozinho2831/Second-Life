@@ -39,12 +39,13 @@
 
                 a{
                     @include title(dark);
-                    font-size: 40px;  
+                    font-size: 35px;  
                 }
             }
         }
 
     }
+
     .header__menu{
         display: flex;
         flex-direction: column;
@@ -116,20 +117,23 @@
     padding: $space;
 
     background-color: $bg;
-    border-bottom: 2px solid $border;
+    border-top: 2px solid $border;
 
     .light &{
         background-color: $bg-light;
-        border-bottom: 2px solid $border-light;
+        border-top: 2px solid $border-light;
     }
 
     ul{
         display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: $gap;
 
         a{
             @include title(dark);
-            font-size: 25px;
+            font-size: 30px;
 
             .light &{
                 @include title(light);
@@ -140,8 +144,7 @@
 
 .view__menu{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
 
     @include responsive(tablet){
         display: none;
