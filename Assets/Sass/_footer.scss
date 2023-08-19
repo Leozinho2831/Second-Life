@@ -1,2 +1,17 @@
 @import '_variáveis';
 @import '_mixins';
+
+.footer{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $bg;
+    border-top: 2px solid $border;
+
+    .light &{
+        background-color: $bg-light;
+        border-top: 2px solid $border-light;
+    }
+}

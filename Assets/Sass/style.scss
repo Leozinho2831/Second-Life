@@ -59,12 +59,4 @@ body{
     &.light{
         background-color: $bg-light;
     }
-
-    h1{
-        @include title(dark);
-    }
-
-    p{
-        @include text(dark);
-    }
 }
