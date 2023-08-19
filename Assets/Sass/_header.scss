@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: $space;
+    gap: 20px;
 
     background-color: $bg;
     border-bottom: 2px solid $border;
@@ -19,9 +20,9 @@
         img{
             width: 100%;
             max-width: 150px;
-            min-width: 100px;
+            min-width: 80px;
             max-height: 150px;
-            min-height: 100px;
+            min-height: 80px;
         }
     }
 
