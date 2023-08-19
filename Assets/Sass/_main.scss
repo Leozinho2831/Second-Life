@@ -1,2 +1,89 @@
 @import '_variáveis';
 @import '_mixins';
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .principal__presentation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $gap;
+        
+        background-image: url(../Images/Backgrounds/Background.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include responsive(tablet){
+            width: 100%;
+            flex-direction: row;
+            padding: $space;
+        }
+
+        figure{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: $space 0 0 0;
+
+            @include responsive(tablet){
+                width: 30%;
+                margin: 0;
+            }
+
+            img{
+                width: 100%;
+                max-width: 330px;
+                min-width: 260px;
+                max-height: 800px;
+                min-height: 400px;
+    
+                border-radius: 10px;
+    
+                box-shadow: 3px 3px 4px $shadow;
+            }
+        }
+
+        .principal__text{
+            width: 70%;
+            max-width: 850px;
+            min-width: 260px;
+            min-height: 400px;
+            max-height: 500px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: $space;
+
+            background-color: $bg-divs;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+
+            box-shadow: 3px 3px 4px $shadow;
+
+            img{
+                width: 50px;
+                height: 50px;
+                margin: $space 0;
+            }
+
+            p{
+                font-size: clamp(10px, 14px + 0.5vw, 25px);
+                @include text(dark);
+                width: 100%;
+                max-width: 100%;
+                min-width: 180px;
+                max-height: 400px;
+                overflow: auto;
+            }
+        }
+    }
+}

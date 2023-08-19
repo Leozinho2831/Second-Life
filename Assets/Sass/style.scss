@@ -54,6 +54,8 @@ p::-webkit-scrollbar-thumb {
 body{
     background-color: $bg;
 
+    overflow-x: hidden;
+
     &.light{
         background-color: $bg-light;
     }
