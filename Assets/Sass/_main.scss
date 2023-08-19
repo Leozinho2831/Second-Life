@@ -40,17 +40,19 @@
                 margin: 0;
             }
 
-            img{
-                width: 100%;
-                max-width: 330px;
-                min-width: 260px;
-                max-height: 800px;
-                min-height: 400px;
-    
-                border-radius: 10px;
-    
-                box-shadow: 3px 3px 4px $shadow;
-            }
+            a{
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    min-width: 260px;
+                    max-height: 800px;
+                    min-height: 400px;
+        
+                    border-radius: 10px;
+        
+                    box-shadow: 3px 3px 4px $shadow;
+                }  
+            } 
         }
 
         .principal__text{
@@ -214,7 +216,7 @@
             }
         }
 
-        #brendon{
+        #brendon-card{
             .info__card{
                 @include info-card(info-brendon);
             }
@@ -224,7 +226,7 @@
             }
         }
 
-        #tessia{
+        #tessia-card{
             .info__card{
                 @include info-card(info-tessia);
             }
@@ -234,7 +236,7 @@
             }
         }
 
-        #amerie{
+        #amerie-card{
             .info__card{
                 @include info-card(info-amerie);
             }
@@ -244,7 +246,7 @@
             }
         }
 
-        #agnes{
+        #agnes-card{
             .info__card{
                 @include info-card(info-agnes);
             }
@@ -254,7 +256,7 @@
             }
         }
 
-        #ambrose{
+        #ambrose-card{
             .info__card{
                 @include info-card(info-ambrose);
             }
@@ -264,7 +266,7 @@
             }
         }
 
-        #amber{
+        #amber-card{
             .info__card{
                 @include info-card(info-amber);
             }
@@ -274,7 +276,7 @@
             }
         }
 
-        #esmeray{
+        #esmeray-card{
             .info__card{
                 @include info-card(info-esmeray);
             }
@@ -305,30 +307,32 @@
             }
         }
 
-        button{
-            width: 150px;
-            height: 40px;
-            margin: $space 0;
-
-            background-color: $bg-divs;
-            box-shadow: 1px 1px 2px $shadow;
-            @include text(dark);
-            font-size: 20px;
-
-            transition: all 0.2s ease-in-out;
-
-            .light &{
-                background-color: $bg-card-light;
-                @include text(light);
-            }
-
-            &:hover{
-                color: $title;
-
-                transform: scale(0.95);
-
+        a{
+            button{
+                width: 150px;
+                height: 40px;
+                margin: $space 0;
+    
+                background-color: $bg-divs;
+                box-shadow: 1px 1px 2px $shadow;
+                @include text(dark);
+                font-size: 20px;
+    
+                transition: all 0.2s ease-in-out;
+    
                 .light &{
-                    color: $title-light;
+                    background-color: $bg-card-light;
+                    @include text(light);
+                }
+    
+                &:hover{
+                    color: $title;
+    
+                    transform: scale(0.95);
+    
+                    .light &{
+                        color: $title-light;
+                    }
                 }
             }
         }

@@ -127,61 +127,6 @@
   }
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  background-color: #1E1E1E;
-  border-top: 2px solid #851C1C;
-  font-family: Juana medium;
-  font-weight: 400;
-  color: #890808;
-}
-.light .footer {
-  background-color: #E6E6FA;
-  border-top: 2px solid #B1B1E8;
-  font-family: Juana medium;
-  font-weight: 400;
-  color: #7474b2;
-}
-.footer address {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.footer address h1 {
-  margin: 30px;
-}
-.footer address div {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-.footer address div a img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s ease-in-out;
-}
-.footer address div a img:hover {
-  transform: scale(1.2);
-}
-.footer address div a img:nth-of-type(1) {
-  display: block;
-}
-.footer address div a img:nth-of-type(2) {
-  display: none;
-}
-.light .footer address div a img:nth-of-type(1) {
-  display: none;
-}
-.light .footer address div a img:nth-of-type(2) {
-  display: block;
-}
-
 .principal {
   display: flex;
   flex-direction: column;
@@ -221,7 +166,7 @@
     margin: 0;
   }
 }
-.principal .principal__presentation figure img {
+.principal .principal__presentation figure a img {
   width: 100%;
   max-width: 330px;
   min-width: 260px;
@@ -360,53 +305,53 @@
   transition: all 0.2s ease-in-out;
   transform: translateY(100%);
 }
-.principal .principal__cards #brendon .info__card {
+.principal .principal__cards #brendon-card .info__card {
   border-top: 4px solid #EBB549;
   background-color: #FFD04F;
 }
-.principal .principal__cards #brendon:hover {
+.principal .principal__cards #brendon-card:hover {
   background-image: linear-gradient(135deg, #FFD04F, #EBB549);
 }
-.principal .principal__cards #tessia .info__card {
+.principal .principal__cards #tessia-card .info__card {
   border-top: 4px solid #565AA6;
   background-color: #5978BD;
 }
-.principal .principal__cards #tessia:hover {
+.principal .principal__cards #tessia-card:hover {
   background-image: linear-gradient(135deg, #5978BD, #565AA6);
 }
-.principal .principal__cards #amerie .info__card {
+.principal .principal__cards #amerie-card .info__card {
   border-top: 4px solid #306AC7;
   background-color: #3385b0;
 }
-.principal .principal__cards #amerie:hover {
+.principal .principal__cards #amerie-card:hover {
   background-image: linear-gradient(135deg, #3385b0, #306AC7);
 }
-.principal .principal__cards #agnes .info__card {
+.principal .principal__cards #agnes-card .info__card {
   border-top: 4px solid #bc2229;
   background-color: #883538;
 }
-.principal .principal__cards #agnes:hover {
+.principal .principal__cards #agnes-card:hover {
   background-image: linear-gradient(135deg, #883538, #bc2229);
 }
-.principal .principal__cards #ambrose .info__card {
+.principal .principal__cards #ambrose-card .info__card {
   border-top: 4px solid #475c38;
   background-color: #2f432e;
 }
-.principal .principal__cards #ambrose:hover {
+.principal .principal__cards #ambrose-card:hover {
   background-image: linear-gradient(135deg, #2f432e, #475c38);
 }
-.principal .principal__cards #amber .info__card {
+.principal .principal__cards #amber-card .info__card {
   border-top: 4px solid #E8732C;
   background-color: #ff5b2a;
 }
-.principal .principal__cards #amber:hover {
+.principal .principal__cards #amber-card:hover {
   background-image: linear-gradient(135deg, #ff5b2a, #E8732C);
 }
-.principal .principal__cards #esmeray .info__card {
+.principal .principal__cards #esmeray-card .info__card {
   border-top: 4px solid #87639e;
   background-color: #E38FD8;
 }
-.principal .principal__cards #esmeray:hover {
+.principal .principal__cards #esmeray-card:hover {
   background-image: linear-gradient(135deg, #E38FD8, #87639e);
 }
 .principal aside {
@@ -431,7 +376,7 @@
   font-weight: 400;
   color: #616060;
 }
-.principal aside button {
+.principal aside a button {
   width: 150px;
   height: 40px;
   margin: 30px 0;
@@ -444,19 +389,74 @@
   font-size: 20px;
   transition: all 0.2s ease-in-out;
 }
-.light .principal aside button {
+.light .principal aside a button {
   background-color: rgba(255, 255, 255, 0.4);
   font-size: clamp(10px, 14px + 1vw, 18px);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #616060;
 }
-.principal aside button:hover {
+.principal aside a button:hover {
   color: #890808;
   transform: scale(0.95);
 }
-.light .principal aside button:hover {
+.light .principal aside a button:hover {
   color: #7474b2;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #1E1E1E;
+  border-top: 2px solid #851C1C;
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #890808;
+}
+.light .footer {
+  background-color: #E6E6FA;
+  border-top: 2px solid #B1B1E8;
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #7474b2;
+}
+.footer address {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footer address h1 {
+  margin: 30px;
+}
+.footer address div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.footer address div a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+.footer address div a img:hover {
+  transform: scale(1.2);
+}
+.footer address div a img:nth-of-type(1) {
+  display: block;
+}
+.footer address div a img:nth-of-type(2) {
+  display: none;
+}
+.light .footer address div a img:nth-of-type(1) {
+  display: none;
+}
+.light .footer address div a img:nth-of-type(2) {
+  display: block;
 }
 
 ::-webkit-scrollbar {
