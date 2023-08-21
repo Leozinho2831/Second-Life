@@ -531,7 +531,7 @@
     max-width: 850px;
     min-width: 350px;
     min-height: 350px;
-    max-height: 400px;
+    max-height: 500px;
   }
 }
 .brendon .brendon__info .brendon__text img {
@@ -562,6 +562,44 @@
   min-width: 180px;
   max-height: 400px;
   overflow: auto;
+}
+.brendon .brendon__info .brendon__elemental {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.brendon .brendon__info .brendon__elemental .elemental__title {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.brendon .brendon__info .brendon__elemental .elemental__title h1 {
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #890808;
+  font-size: 35px;
+}
+.light .brendon .brendon__info .brendon__elemental .elemental__title h1 {
+  font-family: Juana medium;
+  font-weight: 400;
+  color: #7474b2;
+}
+.brendon .brendon__info .brendon__elemental .elemental__title hr {
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #1E1E1E, #851C1C, #1E1E1E);
+}
+.light .brendon .brendon__info .brendon__elemental .elemental__title hr {
+  background-image: linear-gradient(to right, #E6E6FA, #B1B1E8, #E6E6FA);
+}
+.brendon .brendon__info .brendon__elemental .cards__elementais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 ::-webkit-scrollbar {
