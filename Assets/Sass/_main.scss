@@ -19,13 +19,12 @@
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-
         box-shadow: 0 40px 60px 60px $shadow;
 
         @include responsive(tablet){
             width: 100%;
             flex-direction: row;
-            padding: 80px;
+            padding: 60px;
         }
 
         figure{
@@ -73,6 +72,13 @@
             backdrop-filter: blur(2px);
 
             box-shadow: 3px 3px 4px $shadow;
+
+            @include responsive(tablet){
+                max-width: 850px;
+                min-width: 350px;
+                min-height: 350px;
+                max-height: 500px;
+            }
 
             img{
                 width: 90px;

@@ -144,7 +144,8 @@
 
 .view__menu{
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
 
     @include responsive(tablet){
         display: none;
