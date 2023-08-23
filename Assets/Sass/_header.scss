@@ -39,7 +39,11 @@
 
                 a{
                     @include title(dark);
-                    font-size: 35px;  
+                    font-size: 35px;
+
+                    .light &{
+                        @include title(light);
+                    }
                 }
             }
         }

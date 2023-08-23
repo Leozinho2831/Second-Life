@@ -60,6 +60,12 @@
             weight: 400;
         }
         color: $text-light;
+    } @else if $text-type == elemento{
+        font: {
+            size: clamp(10px, 14px + 1vw, 18px);
+            family: 'Poppins', sans-serif;
+            weight: 400;
+        }
     }
 }
 
@@ -119,5 +125,71 @@
     } @else if $info-card == info-esmeray{
         border-top: 4px solid $color2-esmeray;
         background-color: $color1-esmeray;
+    }
+}
+
+// elementos
+
+@mixin elementos($elemental){
+    @if $elemental == water{
+        background-image: linear-gradient(135deg,
+                          $color1-water, $color2-water);
+    } @else if $elemental == earth{
+        background-image: linear-gradient(135deg,
+                          $color1-earth, $color2-earth);
+    } @else if $elemental == air{
+        background-image: linear-gradient(135deg,
+                          $color1-air, $color2-air);
+    } @else if $elemental == ice{
+        background-image: linear-gradient(135deg,
+                          $color1-ice, $color2-ice);
+    } @else if $elemental == dark{
+        background-image: linear-gradient(135deg,
+                          $color1-dark, $color2-dark);
+    } @else if $elemental == fire{
+        background-image: linear-gradient(135deg,
+                          $color1-fire, $color2-fire);
+    } @else if $elemental == eletric{
+        background-image: linear-gradient(135deg,
+                          $color1-eletric, $color2-eletric);
+    } @else if $elemental == steel{
+        background-image: linear-gradient(135deg,
+                          $color1-steel, $color2-steel);
+    }
+}
+
+@mixin elementos-info($elemental-info){
+    @if $elemental-info == info-water{
+        background-color: $color2-water;
+        border-top: 4px solid $color1-water;
+        color: $water-text;
+    } @else if $elemental-info == info-earth{
+        background-color: $color2-earth;
+        border-top: 4px solid $color1-earth;
+        color: $earth-text;
+    } @else if $elemental-info == info-air{
+        background-color: $color2-air;
+        border-top: 4px solid $color1-air;
+        color: $air-text;
+    } @else if $elemental-info == info-ice{
+        background-color: $color2-ice;
+        border-top: 4px solid $color1-ice;
+        color: $ice-text;
+    } @else if $elemental-info == info-dark{
+        background-color: $color2-dark;
+        border-top: 4px solid $color1-dark;
+        color: $dark-text;
+    } @else if $elemental-info == info-fire{
+        background-color: $color2-fire;
+        border-top: 4px solid $color1-fire;
+        color: $fire-text;
+    } @else if $elemental-info == info-eletric{
+        background-color: $color2-eletric;
+        border-top: 4px solid $color1-eletric;
+        color: $eletric-text;
+    } @else if $elemental-info == info-steel{
+        background-color: $color2-steel;
+        border-top: 4px solid $color1-steel;
+        color: $steel-text;
     }
 }

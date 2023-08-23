@@ -100,49 +100,190 @@
                 overflow: auto;
             }
         }
-        
-        .brendon__elemental{
+    }
+    
+    .brendon__elemental{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $space;
+
+        .elemental__title{
+            width: 80%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: $space;
 
-                .elemental__title{
-                width: 60%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+            img{
+                width: 150px;
+                height: 150px;
+                margin: 0 0 15px 0;
+            }
 
-                h1{
-                    @include title(dark);
-                    font-size: 35px;
+            h1{
+                @include title(dark);
+                font-size: 35px;
 
-                    .light &{
-                        @include title(light);
-                    }
-                }
+                margin: $space 0;
 
-                hr{
-                    width: 100%;
-                    height: 2px;
-                    background-image: linear-gradient(to right,
-                                            $bg, $border, $bg);
-        
-                    .light &{
-                        background-image: linear-gradient(to right,
-                                            $bg-light, $border-light, $bg-light);
-                    }
+                .light &{
+                    @include title(light);
                 }
             }
 
-            .cards__elementais{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: $gap;
+            hr{
+                width: 100%;
+                height: 1.5px;
+                background-image: linear-gradient(to right,
+                                        $bg, $border, $bg);
+        
+                .light &{
+                    background-image: linear-gradient(to right,
+                                        $bg-light, $border-light, $bg-light);
+                }
             }
         }
-        
+
+        .cards__elementais{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: $gap;
+            padding: 0 0 $space 0;
+
+            .elemental{
+                width: 200px;
+                height: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                border-radius: 10px;
+                background-color: $card;
+                
+                overflow: hidden;
+                transition: all 0.2s ease-in-out;
+
+                .light &{
+                    background-color: $card-light;
+                }
+
+                &:hover{
+                    div{
+                        transform: translateY(0);
+                    }
+                }
+
+                img{
+                    width: 150px;
+                    height: 150px;
+                }
+
+                div{
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    bottom: 0;
+                    padding: 20px;
+
+                    border-radius: 0 0 10px 10px;
+
+                    transform: translateY(100%);
+                    transition: all 0.2s ease-in-out;
+
+                    p{
+                        @include text(elemento);
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            #elemental-water{
+                &:hover{
+                    @include elementos(water);
+                
+                    div{
+                        @include elementos-info(info-water);
+                    }
+                }
+            }
+
+            #elemental-earth{
+                &:hover{
+                    @include elementos(earth);
+                
+                    div{
+                        @include elementos-info(info-earth);
+                    }
+                }
+            }
+
+            #elemental-air{
+                &:hover{
+                    @include elementos(air);
+                
+                    div{
+                        @include elementos-info(info-air);
+                    }
+                }
+            }
+
+            #elemental-ice{
+                &:hover{
+                    @include elementos(ice);
+                
+                    div{
+                        @include elementos-info(info-ice);
+                    }
+                }
+            }
+
+            #elemental-dark{
+                &:hover{
+                    @include elementos(dark);
+                
+                    div{
+                        @include elementos-info(info-dark);
+                    }
+                }
+            }
+
+            #elemental-fire{
+                &:hover{
+                    @include elementos(fire);
+                
+                    div{
+                        @include elementos-info(info-fire);
+                    }
+                }
+            }
+
+            #elemental-eletric{
+                &:hover{
+                    @include elementos(eletric);
+                
+                    div{
+                        @include elementos-info(info-eletric);
+                    }
+                }
+            }
+
+            #elemental-steel{
+                &:hover{
+                    @include elementos(steel);
+                
+                    div{
+                        @include elementos-info(info-steel);
+                    }
+                }
+            }
+        }
     }
 }
