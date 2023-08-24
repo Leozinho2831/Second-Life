@@ -1,13 +1,41 @@
-@import '../variáveis';
-@import '../mixins';
+@import 'variáveis';
+@import 'mixins';
 
-.brendon{
+.character{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    .brendon__info{
+    #background-brendon{
+        @include background(bg-brendon);
+    }
+
+    #background-tessia{
+        @include background(bg-tessia);
+    }
+
+    #background-amerie{
+        @include background(bg-amerie);
+    }
+
+    #background-agnes{
+        @include background(bg-agnes);
+    }
+
+    #background-ambrose{
+        @include background(bg-ambrose);
+    }
+
+    #background-amber{
+        @include background(bg-amber);
+    }
+
+    #background-esmeray{
+        @include background(bg-esmeray);
+    }
+
+    .character__info{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -16,7 +44,6 @@
         padding: 40px 0;
         gap: $gap;
 
-        background-image: url(../Images/Backgrounds/Prosperum\ Village.png);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -41,10 +68,11 @@
                 max-height: 440px;
 
                 border-radius: 5px;
+                box-shadow: 1px 1px 2px 1px $shadow;
             }
         }
 
-        .brendon__text{
+        .character__text{
             width: 70%;
             max-width: 850px;
             min-width: 260px;
@@ -92,7 +120,7 @@
 
             p{
                 @include text(dark);
-                font-size: clamp(10px, 14px + 0.5vw, 25px);
+                font-size: clamp(12px, 13px + 0.5vw, 22px);
                 width: 100%;
                 max-width: 100%;
                 min-width: 180px;
@@ -102,7 +130,7 @@
         }
     }
     
-    .brendon__elemental{
+    .character__elemental{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -281,6 +309,26 @@
                 
                     div{
                         @include elementos-info(info-steel);
+                    }
+                }
+            }
+
+            #elemental-grass{
+                &:hover{
+                    @include elementos(grass);
+                
+                    div{
+                        @include elementos-info(info-grass);
+                    }
+                }
+            }
+
+            #elemental-interrogation{
+                &:hover{
+                    @include elementos(interrogation);
+                
+                    div{
+                        @include elementos-info(info-interrogation);
                     }
                 }
             }

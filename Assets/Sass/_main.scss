@@ -105,7 +105,7 @@
             }
 
             p{
-                font-size: clamp(10px, 14px + 0.5vw, 25px);
+                font-size: clamp(12px, 13px + 0.5vw, 22px);
                 @include text(dark);
                 width: 100%;
                 max-width: 100%;
