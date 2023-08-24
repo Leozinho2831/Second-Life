@@ -178,6 +178,9 @@
     } @else if $elemental == grass{
         background-image: linear-gradient(135deg,
                           $color1-grass, $color2-grass);
+    } @else if $elemental == interrogation{
+        background-image: linear-gradient(135deg,
+                          $color1-interrogation, $color2-interrogation);
     }
 }
 
@@ -218,5 +221,9 @@
         background-color: $color2-grass;
         border-top: 4px solid $color1-grass;
         color: $grass-text;
+    } @else if $elemental-info == info-interrogation{
+        background-color: $color2-interrogation;
+        border-top: 4px solid $color1-interrogation;
+        color: $interrogation-text;
     }
 }

@@ -749,6 +749,15 @@
   border-top: 4px solid #9db664;
   color: #7fb611;
 }
+.character .character__elemental .cards__elementais #elemental-interrogation:hover {
+  background-image: linear-gradient(135deg, #1e1e1e, #332F2E);
+}
+.character .character__elemental .cards__elementais #elemental-interrogation:hover div {
+  background-color: #332F2E;
+  border-top: 4px solid #1e1e1e;
+  color: #cfcbcb;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
