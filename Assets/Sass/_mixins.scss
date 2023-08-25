@@ -30,18 +30,6 @@
             weight: 400;
         }
         color: $title-light;
-    } @else if $title-type == thin-dark{
-        font: {
-            family: Juana light;
-            weight: 700;
-        }
-        color: $title;
-    } @else if $title-type == thin-light{
-        font: {
-            family: Juana light;
-            weight: 700;
-        }
-        color: $title-light;
     }
 }
 

@@ -3,6 +3,7 @@
 
 .footer{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: $space;
@@ -65,5 +66,15 @@
                 }
             }
         }  
+    }
+
+    h3{
+        @include title(dark);
+        text-align: center;
+        font-size: 25px;
+
+        .light &{
+            @include title(light);
+        }
     }
 }
