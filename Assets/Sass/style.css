@@ -474,14 +474,14 @@
 .light .footer address div a img:nth-of-type(2) {
   display: block;
 }
-.footer h3 {
+.footer h2 {
   font-family: Juana medium;
   font-weight: 400;
   color: #a10707;
   text-align: center;
   font-size: 25px;
 }
-.light .footer h3 {
+.light .footer h2 {
   font-family: Juana medium;
   font-weight: 400;
   color: #7474b2;
